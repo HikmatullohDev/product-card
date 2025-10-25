@@ -9,7 +9,7 @@
   font-weight: 400;
 }
 
-.main-title{
+.main-title {
   font-size: 70px;
   line-height: 78px;
   display: flex;
@@ -33,14 +33,14 @@
   z-index: -1;
 }
 
-.content{
+.content {
   width: 1280px;
   justify-content: center;
   position: relative;
   margin: 0 auto;
 }
 
-.content-container{
+.content-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -69,24 +69,24 @@
   display: block;
 }
 
-.product-name{
+.product-name {
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
   margin-bottom: 5px;
 }
 
-.product-description{
+.product-description {
   margin-bottom:15px;
 }
 
-.product-compound{
+.product-compound {
   margin-top: 5px;
   list-style: circle;
   margin-bottom: 25px;
 }
 
-.product-compound-item{
+.product-compound-item {
   margin-left: 14px;
 }
 
@@ -102,5 +102,6 @@
 }
 
 .product-price-container {
-  display: flex; justify-content: space-between;
+  display: flex; 
+  justify-content: space-between;
 }
