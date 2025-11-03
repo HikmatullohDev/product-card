@@ -105,3 +105,11 @@
   display: flex; 
   justify-content: space-between;
 }
+
+.color-change-button {
+  background-color: #a9a9a9;
+}
+
+.bg-brown {
+  background-color: #cd853f;
+}
