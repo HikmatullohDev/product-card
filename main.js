@@ -29,8 +29,8 @@ function openGoogle() {
 }
 
 // Вывод консоль лог
-const outputLogButton = document.querySelector('#output-console-log');
-outputLogButton.addEventListener('click', () => outputConsoleLog('делаю домашку номер 4.'));
+const outputNotificationButton = document.querySelector('#output-notification');
+outputNotificationButton.addEventListener('click', () => outputConsoleLog('делаю домашку номер 4.'));
 
 function outputConsoleLog(massage) {
   alert(massage)
@@ -38,15 +38,15 @@ function outputConsoleLog(massage) {
 }
 
 // Вывод контента заголовка в консоль лог
-const outputMainTitle = document.querySelector('.main-title');
+const MainTitle = document.querySelector('.main-title');
 
-outputMainTitle.addEventListener('mouseover', () => {
-  console.log(outputMainTitle.textContent)
+MainTitle.addEventListener('mouseover', () => {
+  console.log(MainTitle.textContent)
 })
 
 // cмена цвета кнопки с первого на второй цвет и со второго на первый
-const colorChangeButton = document.querySelector('.color-change-button');
+const colorToggleButton = document.querySelector('.bg-grey');
 
-colorChangeButton.addEventListener('click', () => {
-  colorChangeButton.classList.toggle('bg-brown');
+colorToggleButton.addEventListener('click', () => {
+  colorToggleButton.classList.toggle('bg-brown');
 })
