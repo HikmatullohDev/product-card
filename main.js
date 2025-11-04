@@ -30,18 +30,18 @@ function openGoogle() {
 
 // Вывод консоль лог
 const outputNotificationButton = document.querySelector('#output-notification');
-outputNotificationButton.addEventListener('click', () => outputConsoleLog('делаю домашку номер 4.'));
+outputNotificationButton.addEventListener('click', () => outputNotification('делаю домашку номер 4.'));
 
-function outputConsoleLog(massage) {
+function outputNotification(massage) {
   alert(massage)
   console.log(massage)
 }
 
 // Вывод контента заголовка в консоль лог
-const MainTitle = document.querySelector('.main-title');
+const mainTitle = document.querySelector('.main-title');
 
-MainTitle.addEventListener('mouseover', () => {
-  console.log(MainTitle.textContent)
+mainTitle.addEventListener('mouseover', () => {
+  console.log(mainTitle.textContent)
 })
 
 // cмена цвета кнопки с первого на второй цвет и со второго на первый
