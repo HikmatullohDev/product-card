@@ -105,3 +105,11 @@
   display: flex; 
   justify-content: space-between;
 }
+
+.bg-grey {
+  background-color: #a9a9a9;
+}
+
+.bg-brown {
+  background-color: #cd853f;
+}
