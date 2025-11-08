@@ -13,7 +13,7 @@ showWeatherInfo('Новосибирск', -10);
 
 const ACOUSTIC_SPEED = 343
 
-function GetSpeedInfo(speed) {
+function compareSpeed(speed) {
   if (speed > ACOUSTIC_SPEED) {
     console.log('Сверхзвуковая скорость');
   } else if (speed == ACOUSTIC_SPEED) {
@@ -23,7 +23,7 @@ function GetSpeedInfo(speed) {
   }
 }
 
-GetSpeedInfo(343);
+compareSpeed(343);
 
 // 5. Функция принимает текущий баланс пользователя и проверяет, хватает ли денег на покупку товара.
 
