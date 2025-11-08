@@ -13,7 +13,7 @@ showWeatherInfo('Новосибирск', -10);
 
 const ACOUSTIC_SPEED = 343
 
-function speedometer(speed) {
+function GetSpeedInfo(speed) {
   if (speed > ACOUSTIC_SPEED) {
     console.log('Сверхзвуковая скорость');
   } else if (speed == ACOUSTIC_SPEED) {
@@ -23,22 +23,22 @@ function speedometer(speed) {
   }
 }
 
-speedometer(343);
+GetSpeedInfo(343);
 
 // 5. Функция принимает текущий баланс пользователя и проверяет, хватает ли денег на покупку товара.
 
 const product = 'ноутбук'
-const priceTag = 35700
+const productPrice = 35700
 
-function purchase(balance) {
-  if (balance > priceTag) {
+function purchaseLaptop(balance) {
+  if (balance > productPrice) {
     console.log(`${product} приобретен, спасибо за покупку!`);
   } else {
-    console.log(`Вам не хватает ${priceTag-balance}$ пополните баланс`);
+    console.log(`Вам не хватает ${productPrice - balance}$ пополните баланс`);
   }
 }
 
-purchase(30000)
+purchaseLaptop(30000)
 
 // Функция которая одобряет вступление игрока в команду используя 3 переменных
 // минимальный кд, минимальный возраст, сыгранные часы.
