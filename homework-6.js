@@ -27,7 +27,7 @@ const car = {
   bodyStyle: 'купе',
 }
 
-car.Owner = { ...person }
+car.owner = { ...person }
 console.log(car);
 
 // 5. Написать функцию которая аргументом будет принимать объект,
