@@ -36,26 +36,26 @@ console.log(car);
 // если нет - добавляет его и задает значение,
 //  если есть - прекращает выполнение (ничего не делает)
 
-function addSpeedParametres(car) {
+function addSpeedParameter(car) {
   if (!car.hasOwnProperty('maxSpeed')) {
     car.maxSpeed = 400;
   }
 }
 
-addSpeedParametres(car);
+addSpeedParameter(car);
 console.log(car);
 
 // 6. Написать функцию, которая получает первым аргументом  — объект, 
 // а вторым аргументом — свойство объекта,
 // которое нужно вывести и выводит его значение.
 
-const test = (car, mark) => {
+const getObjectProperty = (car, mark) => {
   if (car.hasOwnProperty(mark)) {
     console.log(car[mark])
   }
 }
 
-test(car, 'mark')
+getObjectProperty(car, 'mark')
 
 // 7. Создать массив, который содержит названия продуктов (просто строки)
 
