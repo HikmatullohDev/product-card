@@ -49,13 +49,13 @@ console.log(car);
 // а вторым аргументом — свойство объекта,
 // которое нужно вывести и выводит его значение.
 
-const getObjectProperty = (car, mark) => {
+const showObjectProperty = (car, mark) => {
   if (car.hasOwnProperty(mark)) {
     console.log(car[mark])
   }
 }
 
-getObjectProperty(car, 'mark')
+showObjectProperty(car, 'mark')
 
 // 7. Создать массив, который содержит названия продуктов (просто строки)
 
