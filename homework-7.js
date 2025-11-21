@@ -29,11 +29,12 @@ console.log(checkGame);
 // и изменять его порядок на противоположный ("переворачивать")
 // Два вышеуказанных массива с помощью этой функции перевернуть.
 
-const reverseArray = (array1, array2) => {
-  console.log(array1.reverse(), array2.reverse())
+const reverseArray = (array) => {
+  console.log(array.reverse())
 }
 
-reverseArray(games, numbers);
+reverseArray(games);
+reverseArray(numbers);
 
 // 5. Добавил файл comments.js
 
