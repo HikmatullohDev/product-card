@@ -40,7 +40,7 @@
   margin: 0 auto;
 }
 
-.content-container {
+#product-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
