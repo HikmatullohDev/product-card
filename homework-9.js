@@ -12,17 +12,19 @@ let user = undefined
 
 const footerEmail = document.querySelector('#footer-email');
 footerEmail.addEventListener('submit', (event) => {
-  event.preventDefault()
-  const email = footerEmail.querySelector('input').value;
-  console.log({ email });
+  event.preventDefault();
+  const form = event.target;
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+  console.log(data);
 });
 
 // Уровень 2:
 // 5. Создать форму для регистрации.
 // 6. Сохраняем этот объект в переменную для дальнейшего использования.
 
-const password = document.getElementById ("password");
-const repeatPassword = document.getElementById ("repeatPassword");
+const password = document.getElementById("password");
+const repeatPassword = document.getElementById("repeatPassword");
 const registrationForm = document.querySelector('.registration-form');
 
 registrationForm.addEventListener('submit', (event) => {
