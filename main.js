@@ -12,23 +12,6 @@ import "./homework-10/form.js";
 // (имеется ввиду - с машинами/бьюти-продуктами). Придумайте свою структуру 
 // и реализуйте наследуемость классов
 
-const user = {
-  name: 'vlad',
-  function() {
-    console.log(this.name)
-  }
-}
-
-const user2 = {
-  name: 'vlad',
-  function() {
-    console.log(this.name)
-  }
-}
-
-const greet = user2.function.bind(user2)
-greet();
-
 class Country {
   constructor(name, population, language) {
     this.name = name;
