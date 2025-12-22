@@ -1,5 +1,5 @@
-import { Modal } from './homework-10/modal.js';
-import { Form } from './homework-10/form.js';
+import { Modal } from './homework-10/Modal.js';
+import { Form } from './homework-10/Form.js';
 let user = undefined
 
 // 1. Создаем файл, все как прошлых дз.

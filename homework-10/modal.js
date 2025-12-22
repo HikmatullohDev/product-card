@@ -12,21 +12,27 @@
 */
 
 export class Modal {
+
   constructor(id) {
-    this.modal = document.querySelector(id)
+    this.modal = document.querySelector(id);
     this.closeModalByClick();
   }
+
   openModal() {
-    this.modal.classList.add('modal-showed')
-    }
+    this.modal.classList.add('modal-showed');
+  }
+
   closeModal() {
     this.modal.classList.remove('modal-showed');
-  };
+  }
+
   isOpenModal() {
     return this.modal.classList.contains('modal-showed');
-  };
+  }
+
   closeModalByClick() {
     const closeBtn = document.querySelector('.close-btn');
     closeBtn.addEventListener('click', () => this.closeModal());
   }
+
 }

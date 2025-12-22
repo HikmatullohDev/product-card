@@ -9,18 +9,23 @@
 */
 
 export class Form {
+
   constructor(id) {
-    this.form = document.querySelector(id)
+    this.form = document.querySelector(id);
   }
+
   getFormData() {
     const formData = new FormData(this.form);
     const data = Object.fromEntries(formData.entries());
     return data;
   }
+
   isValid() {
     return this.form.checkValidity();
   }
+
   reset() {
     this.form.reset();
   }
+
 }
