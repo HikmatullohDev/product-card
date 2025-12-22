@@ -1,52 +1,39 @@
-// Покраска всех карточек
-const productCard = document.querySelectorAll('.card-container');
-const colorChangeAllCard = document.querySelector('#color-change-all-card');
-const brownColor =' #cd853f';
+import './homework-4.js';
+import './homework-5.js';
+import './homework-6.js';
+import './homework-7.js';
+import './homework-8.js';
+import './productCards.js';
+import './homework-9.js';
+import "./homework-10/Modal.js";
+import "./homework-10/Form.js";
 
-colorChangeAllCard.addEventListener('click', () => {
-  productCard.forEach((card) => card.style.backgroundColor = brownColor)
-})
+// 3. Создать структуру на ваш выбор, как было показано в лекции
+// (имеется ввиду - с машинами/бьюти-продуктами). Придумайте свою структуру 
+// и реализуйте наследуемость классов
 
-// Покраска первой карточки
-const greyColorHash =' #c0c0c0';
-const firstProductCard = document.querySelector('.card-container');
-const colorChangeFirstCardButton = document.querySelector('#color-change-first-card');
-
-colorChangeFirstCardButton.addEventListener('click', () => {
-  firstProductCard.style.backgroundColor = greyColorHash
-})
-
-// гугл страница в новой вкладке (сделал ссылку через константу для переиспользования в дальнейшем)
-const openGoogleButton = document.querySelector('#open-google');
-const googleURL = 'https://google.com';
-
-openGoogleButton.addEventListener('click', openGoogle);
-
-function openGoogle() {
-  const answer = confirm('Вы точно хотите открыть Google?')
-  if (answer === true)
-    window.open(googleURL)
+class Country {
+  constructor(name, population, language) {
+    this.name = name;
+    this.population = population;
+  }
+  showCountryInfo() {
+    console.log(`${this.name} - в этой стране живет ${this.population} человек.`)
+  }
 }
 
-// Вывод консоль лог
-const outputNotificationButton = document.querySelector('#output-notification');
-outputNotificationButton.addEventListener('click', () => outputNotification('делаю домашку номер 4.'));
-
-function outputNotification(massage) {
-  alert(massage)
-  console.log(massage)
+class Europe extends Country {
+  constructor(name, population, language) {
+    super(name, population)
+    this.language = language
+  }
+  showCountryInfo() {
+    console.log(`${this.name} - в этой стране живет ${this.population} человек. Язык этой страны ${this.language}`)
+  }
 }
 
-// Вывод контента заголовка в консоль лог
-const mainTitle = document.querySelector('.main-title');
+const america = new Europe('Америка', 12000, 'Английский');
+america.showCountryInfo();
 
-mainTitle.addEventListener('mouseover', () => {
-  console.log(mainTitle.textContent)
-})
-
-// cмена цвета кнопки с первого на второй цвет и со второго на первый
-const colorToggleButton = document.querySelector('.bg-grey');
-
-colorToggleButton.addEventListener('click', () => {
-  colorToggleButton.classList.toggle('bg-brown');
-})
+const china = new Country('Китай', 55000, 'китйаский мандаринский');
+china.showCountryInfo();
