@@ -10,12 +10,12 @@ export class Coffee extends Drink {
 
   getInfo() {
     super.getInfo();
-    console.log(`Тип зёрен: ${this.grain}, Молоко: ${this.milk}`);
+    console.log(`Тип зёрен: ${ this.grain }, Молоко: ${ this.milk }`);
   }
 
   #prepareCoffee() {
     setTimeout(() => {
-      console.log( `Перемалываем зёрна ${this.grain} кофемалкой`)
+      console.log( `Перемалываем зёрна ${ this.grain } кофемалкой`)
     }, 1000);
 
     setTimeout(() => {
@@ -23,17 +23,17 @@ export class Coffee extends Drink {
     }, 2000);
 
     setTimeout(() => {
-      console.log(`Заливаем ${this.milk} в питчер, начинаем взбивать`)
+      console.log(`Заливаем ${ this.milk } в питчер, начинаем взбивать`)
     }, 3000);
 
     setTimeout(() => {
-      console.log(`В эспрессо вливаем молоко ${this.milk} и подаем`)
+      console.log(`В эспрессо вливаем молоко ${ this.milk } и подаем`)
     }, 4000);
   }
 
-  getPreparedDrink() {
+  serveDrink() {
     this.#prepareCoffee();
-    super.getPreparedDrink();
+    super.serveDrink();
   }
 
 }

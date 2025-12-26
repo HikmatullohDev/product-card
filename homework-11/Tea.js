@@ -10,12 +10,12 @@ export class Tea extends Drink {
 
   getInfo() {
     super.getInfo()
-    console.log(`Вид чая: ${this.type}, сорт чая: ${this.sort}`);
+    console.log(`Вид чая: ${ this.type }, сорт чая: ${ this.sort }`);
   }
 
   #prepareTea() {
     setTimeout(() => {
-      console.log(`Насыпаем ${this.name}, сорта - ${this.sort}`)
+      console.log(`Насыпаем ${ this.name }, сорта - ${ this.sort }`)
     }, 1000);
 
     setTimeout(() => {
@@ -27,9 +27,9 @@ export class Tea extends Drink {
     }, 5000);
   }
 
-  getPreparedDrink() {
+  serveDrink() {
     this.#prepareTea();
-    super.getPreparedDrink();
+    super.serveDrink();
   }
 
 }

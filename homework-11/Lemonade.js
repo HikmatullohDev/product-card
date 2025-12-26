@@ -10,12 +10,12 @@ export class Lemonade extends Drink {
 
   getInfo() {
     super.getInfo()
-    console.log(`Вкус сиропа: ${this.syrup}, кусочки фрукта: ${this.fruit}`);
+    console.log(`Вкус сиропа: ${ this.syrup }, кусочки фрукта: ${ this.fruit }`);
   }
 
   #prepareLemonade() {
     setTimeout(() => {
-      console.log(`Добавляем сироп ${this.syrup} и кусочки ${this.fruit}`)
+      console.log(`Добавляем сироп ${ this.syrup } и кусочки ${ this.fruit }`)
     }, 1000);
 
     setTimeout(() => {
@@ -23,7 +23,7 @@ export class Lemonade extends Drink {
     }, 3000);
 
     setTimeout(() => {
-      console.log(`Хорошенько перемешиваем ${this.syrup} и фрукты в содовой`)
+      console.log(`Хорошенько перемешиваем ${ this.syrup } и фрукты в содовой`)
     }, 5000);
 
     setTimeout(() => {
@@ -31,9 +31,9 @@ export class Lemonade extends Drink {
     }, 7000);
   }
 
-  getPreparedDrink() {
+  serveDrink() {
     this.#prepareLemonade();
-    super.getPreparedDrink();
+    super.serveDrink();
   }
 
 }
