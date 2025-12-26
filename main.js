@@ -5,8 +5,9 @@ import './homework-7.js';
 import './homework-8.js';
 import './productCards.js';
 import './homework-9.js';
-import "./homework-10/Modal.js";
-import "./homework-10/Form.js";
+import './homework-10/Modal.js';
+import './homework-10/Form.js';
+import './homework-11/homework-11.js';
 
 // 3. Создать структуру на ваш выбор, как было показано в лекции
 // (имеется ввиду - с машинами/бьюти-продуктами). Придумайте свою структуру 
@@ -31,9 +32,3 @@ class Europe extends Country {
     console.log(`${this.name} - в этой стране живет ${this.population} человек. Язык этой страны ${this.language}`)
   }
 }
-
-const america = new Europe('Америка', 12000, 'Английский');
-america.showCountryInfo();
-
-const china = new Country('Китай', 55000, 'китйаский мандаринский');
-china.showCountryInfo();
