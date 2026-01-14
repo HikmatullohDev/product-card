@@ -3,15 +3,21 @@ const userCards = document.querySelector('.user-cards');
 
 loadUsers();
 
+function tryLoadUsersFromStorage() {
+  userCards.textContent = 'Данные загружаются';
+  const users = JSON.parse(localStorage.getItem('users'));
+
+  if (users) {
+    renderUserCards(users);
+    return true;
+  }
+
+  return false;
+}
+
 async function loadUsers() {
   try {
-    userCards.textContent = 'Данные загружаются';
-    const users = JSON.parse(localStorage.getItem('users'));
-
-    if (users) {
-      renderUserCards(users);
-      return;
-    }
+    if (tryLoadUsersFromStorage()) return;
 
     const response = await fetch('./users.json');
 
