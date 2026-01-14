@@ -3,21 +3,19 @@ const userCards = document.querySelector('.user-cards');
 
 loadUsers();
 
-function tryLoadUsersFromStorage() {
-  userCards.textContent = 'Данные загружаются';
-  const users = JSON.parse(localStorage.getItem('users'));
-
-  if (users) {
-    renderUserCards(users);
-    return true;
-  }
-
-  return false;
+function getUsersFromStorage() {
+  return JSON.parse(localStorage.getItem('users'));
 }
 
 async function loadUsers() {
   try {
-    if (tryLoadUsersFromStorage()) return;
+    userCards.textContent = 'Данные загружаются';
+    const users = getUsersFromStorage();
+
+    if (users) {
+      renderUserCards(users);
+      return;
+    }
 
     const response = await fetch('./users.json');
 
@@ -58,14 +56,14 @@ function renderUserCards(usersArray) {
 }
 
 function deleteUser(id) {
-  let users = JSON.parse(localStorage.getItem('users'));
+  let users = getUsersFromStorage();
   users = users.filter(user => user.id !== id);
   if (users.length === 0) {
     localStorage.removeItem('users');
   } else {
     localStorage.setItem('users', JSON.stringify(users));
   }
-  
+
   renderUserCards(users);
 }
 
